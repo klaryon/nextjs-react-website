@@ -1,15 +1,30 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import styled from "styled-components"
+
+const Hero = styled.div`
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+`;
+
+const Heading = styled.div`
+  color: #000;
+  font-size: 10rem;
+  font-weight: 900;
+`;
 
 export default function Contact() {
   return (
     <>
       <Head>
-        <title>nextjs website</title>
+        <title>Contact Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <h1>Contact</h1>
+      <Hero>
+        <Heading>CONTACT</Heading>
+      </Hero>
     </>
   );
 }
