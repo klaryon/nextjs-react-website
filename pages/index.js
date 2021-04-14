@@ -1,15 +1,30 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styled from "styled-components"
+
+const Hero = styled.div`
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+`;
+
+const Heading = styled.div`
+  color: #000;
+  font-size: 10rem;
+  font-weight: 900;
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>nextjs website</title>
+        <title>Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-    </div>
-  )
+      <Hero>
+        <Heading>NEXT</Heading>
+      </Hero>
+    </>
+  );
 }
